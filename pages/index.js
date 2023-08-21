@@ -19,21 +19,6 @@ export default function Home() {
       </main>
 
       <Footer />
-
-    <Script
-      id="netlify-widget"
-      dangerouslySetInnerHTML={{
-        __html: `f (window.netlifyIdentity) {
-          window.netlifyIdentity.on("init", user => {
-            if (!user) {
-              window.netlifyIdentity.on("login", () => {
-                document.location.href = "/admin/";
-              });
-            }
-          });
-        }`,
-      }}
-    />
     </div>
   )
 }
