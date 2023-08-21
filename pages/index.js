@@ -19,18 +19,21 @@ export default function Home() {
       </main>
 
       <Footer />
-    </div>
 
-    <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
+    <Script
+      id="netlify-widget"
+      dangerouslySetInnerHTML={{
+        __html: `f (window.netlifyIdentity) {
+          window.netlifyIdentity.on("init", user => {
+            if (!user) {
+              window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+              });
+            }
           });
-        }
-      });
-    }
-    </script>
+        }`,
+      }}
+    />
+    </div>
   )
 }
