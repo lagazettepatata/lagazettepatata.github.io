@@ -8,7 +8,6 @@ export default function Home() {
       <Head>
         <title>Next.js Starter!</title>
         <link rel="icon" href="/favicon.ico" />
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </Head>
 
       <main>
