@@ -3,24 +3,29 @@ import React from 'react'
 import path from 'path'
 import useEmblaCarousel from 'embla-carousel-react'
 import Post from '@components/Post'
+import News from '@components/News'
 import Funny from '@components/Funny'
 import { getPostsData } from '../lib/posts';
 
 export async function getStaticProps() {
   const postsDirectory = path.join(process.cwd(), 'posts');
   const funnyDirectory = path.join(process.cwd(), 'funny');
+  const newsDirectory = path.join(process.cwd(), 'news');
   
   const posts = getPostsData(postsDirectory);
   const funny = getPostsData(funnyDirectory);
+  const news = getPostsData(newsDirectory);
+
   return {
     props: {
       posts,
-      funny
+      funny,
+      news
     },
   };
 }
 
-export default function Home({ posts, funny }) {
+export default function Home({ posts, funny, news }) {
   const [emblaRef] = useEmblaCarousel()
 
   return (
@@ -43,6 +48,11 @@ export default function Home({ posts, funny }) {
           {posts.map(post => (
             <div key={post.id} className="embla__slide">
               <Post frontmatter={post.frontmatter} markdown={post.content}></Post>
+            </div>
+          ))}
+          {news.map(article => (
+            <div key={article.id} className="embla__slide">
+              <News frontmatter={article.frontmatter} markdown={article.content}></News>
             </div>
           ))}
           {funny.map(fun => (

@@ -16,14 +16,21 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime", date_format: "DD.MM.YYYY", time_format: "HH:mm", format: "LLL"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "funny" # Used in routes, e.g., /admin/collections/blog
-    label: "Funny" # Used in the UI
-    folder: "funny" # The path to the folder where the documents are stored
+  - name: "news" # Used in routes, e.g., /admin/collections/blog
+    label: "News" # Used in the UI
+    folder: "news" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime", date_format: "DD.MM.YYYY", time_format: "HH:mm", format: "LLL"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Body", name: "news1", widget: "markdown"}
       - {label: "Image", name: "img1", widget: "image"}
       - {label: "Image", name: "img2", widget: "image"}
+      - {label: "Body", name: "news2", widget: "markdown"}
+      - {label: "Body", name: "news3", widget: "markdown"}
+      - {label: "Image", name: "img3", widget: "image"}
+      - {label: "Image", name: "img4", widget: "image"}
+      - {label: "Body", name: "news4", widget: "markdown"}
+      - {label: "Body", name: "news5", widget: "markdown"}
+      - {label: "Image", name: "img5", widget: "image"}
