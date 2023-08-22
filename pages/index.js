@@ -1,11 +1,20 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
 import React, { useCallback } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
+import Post from '@components/Post'
+import { getPostsData } from '../lib/posts';
 
-export default function Home() {
+export async function getStaticProps() {
+  const posts = getPostsData();
+  return {
+    props: {
+      posts
+    },
+  };
+}
+
+export default function Home({ posts }) {
   const [emblaRef, emblaApi] = useEmblaCarousel()
 
   const scrollPrev = useCallback(() => {
@@ -33,11 +42,13 @@ export default function Home() {
               </main>
             </div>
           </div>
-          <div className="embla__slide">Slide 2</div>
-          <div className="embla__slide">Slide 3</div>
+          {posts.map(post => (
+            <div key={post.id} className="embla__slide">
+              <Post frontmatter={post.frontmatter} markdown={post.content}></Post>
+            </div>
+          ))}
         </div>
       </div>
     </div>
-
   )
 }
