@@ -45,11 +45,11 @@ export default function Home({ posts, funny, news }) {
               </main>
             </div>
           </div>
-          {posts.map(post => (
+          {/* {posts.map(post => (
             <div key={post.id} className="embla__slide">
               <Post frontmatter={post.frontmatter} markdown={post.content}></Post>
             </div>
-          ))}
+          ))} */}
           {news.map(article => (
             <div key={article.id} className="embla__slide">
               <News frontmatter={article.frontmatter} markdown={article.content}></News>
