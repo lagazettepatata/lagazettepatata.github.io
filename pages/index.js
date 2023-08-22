@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React, { useCallback } from 'react'
+import React from 'react'
 import path from 'path'
 import useEmblaCarousel from 'embla-carousel-react'
 import Post from '@components/Post'
@@ -21,15 +21,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts, funny }) {
-  const [emblaRef, emblaApi] = useEmblaCarousel()
-
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev()
-  }, [emblaApi])
-
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext()
-  }, [emblaApi])
+  const [emblaRef] = useEmblaCarousel()
 
   return (
     <div className="embla">
