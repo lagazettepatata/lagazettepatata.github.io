@@ -8,9 +8,9 @@ import Funny from '@components/Funny'
 import { getPostsData } from '../lib/posts';
 
 export async function getStaticProps() {
-  const postsDirectory = path.join(process.cwd(), 'posts');
-  const funnyDirectory = path.join(process.cwd(), 'funny');
-  const newsDirectory = path.join(process.cwd(), 'news');
+  const postsDirectory = path.join(process.cwd(), 'content/posts');
+  const funnyDirectory = path.join(process.cwd(), 'content/funny');
+  const newsDirectory = path.join(process.cwd(), 'content/news');
   
   const posts = getPostsData(postsDirectory);
   const funny = getPostsData(funnyDirectory);

@@ -9,7 +9,7 @@ publish_mode: editorial_workflow # For Drafts
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
-    folder: "posts" # The path to the folder where the documents are stored
+    folder: "content/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -18,7 +18,7 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "funny" # Used in routes, e.g., /admin/collections/blog
     label: "Funny" # Used in the UI
-    folder: "funny" # The path to the folder where the documents are stored
+    folder: "content/funny" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -29,7 +29,7 @@ collections:
       - {label: "Image", name: "img2", widget: "image"}
   - name: "news" # Used in routes, e.g., /admin/collections/blog
     label: "News" # Used in the UI
-    folder: "news" # The path to the folder where the documents are stored
+    folder: "content/news" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
