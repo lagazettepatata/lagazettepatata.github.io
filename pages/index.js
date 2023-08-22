@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Image from 'next/image'
 import React, { useCallback } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'

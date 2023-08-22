@@ -1,5 +1,4 @@
 import ReactMarkdown from 'react-markdown'
-import matter from 'gray-matter'
 import Head from 'next/head'
 
 export default function Post({ frontmatter, markdown}) {
