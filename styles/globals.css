@@ -6,30 +6,17 @@ body {
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-* {
-  box-sizing: border-box;
+.embla {
+  overflow: hidden;
+  flex: 0 0 95%;
 }
 
-main {
-  padding: 5rem 0;
-  flex: 1;
+.embla__container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-family: Menlo, Monaco, Lucida Console, Courier New, monospace;
-}
-
-.container {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
 }
